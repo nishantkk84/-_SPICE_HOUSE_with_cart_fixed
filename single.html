@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>単一香料（シングルスパイス） - 香境 SPICE HOUSE</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="header"><div class="header-inner container">
+  <div class="brand"><div class="logo-mark"><img src="Image/logo.png" alt="香境 SPICE HOUSE ロゴ" /></div><div><div class="brand-title">香境 SPICE HOUSE</div><div class="brand-sub">単一香料（シングルスパイス）</div></div></div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <nav class="nav"><a href="index.html">ホーム</a><a href="menu.html">スパイス一覧</a><a href="about.html">香境について</a></nav>
+    <div class="cart-btn" onclick="toggleCart()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="cart-count">0</span></div>
+  </div>
+</div></div>
+
+<main class="container">
+  <div class="section-title"><h2>単一香料（シングルスパイス）</h2></div>
+  <p class="kv">以下は単一香料（シングルスパイス）のラインナップです。価格はすべて同じ区間内で表示しています。</p>
+  <div style="margin-top:18px" class="grid">
+    
+      <div class="item">
+        <div class="thumb">[姜黄粉]</div>
+        <div>
+          <h3>ターメリック</h3>
+          <p class="kv">鮮やかな黄色、土のような温かみ。カレーやスムージーに。</p>
+          <div style="margin-top:8px"><span class="price">¥800</span>
+            <button class="btn primary" onclick="addToCart({id:'turmeric',name:'ターメリック',price:800,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="item">
+        <div class="thumb">[クミンシード]</div>
+        <div>
+          <h3>クミン</h3>
+          <p class="kv">香ばしい種の香り。肉料理や煮込みに。</p>
+          <div style="margin-top:8px"><span class="price">¥850</span>
+            <button class="btn primary" onclick="addToCart({id:'cumin',name:'クミン',price:850,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="item">
+        <div class="thumb">[コリアンダーシード]</div>
+        <div>
+          <h3>コリアンダー</h3>
+          <p class="kv">柑橘のようなさわやかさ。スパイスミックスに最適。</p>
+          <div style="margin-top:8px"><span class="price">¥750</span>
+            <button class="btn primary" onclick="addToCart({id:'coriander',name:'コリアンダー',price:750,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="item">
+        <div class="thumb">[カルダモン]</div>
+        <div>
+          <h3>カルダモン</h3>
+          <p class="kv">華やかで甘い香り。デザートやチャイに。</p>
+          <div style="margin-top:8px"><span class="price">¥1000</span>
+            <button class="btn primary" onclick="addToCart({id:'cardamom',name:'カルダモン',price:1000,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="item">
+        <div class="thumb">[フェンネルシード]</div>
+        <div>
+          <h3>フェンネル</h3>
+          <p class="kv">甘くアニスのような香り。魚料理やピクルスに。</p>
+          <div style="margin-top:8px"><span class="price">¥700</span>
+            <button class="btn primary" onclick="addToCart({id:'fennel',name:'フェンネル',price:700,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="item">
+        <div class="thumb">[芥末籽]</div>
+        <div>
+          <h3>マスタードシード</h3>
+          <p class="kv">辛味のアクセント。ピクルスやマリネに。</p>
+          <div style="margin-top:8px"><span class="price">¥650</span>
+            <button class="btn primary" onclick="addToCart({id:'mustard',name:'マスタードシード',price:650,qty:1})">カートに追加</button>
+          </div>
+        </div>
+      </div>
+        
+  </div>
+
+  <div style="margin-top:30px"><a class="cta" href="checkout.html">購入手続きへ</a></div>
+
+  <div class="footer">© 2025 香境 SPICE HOUSE</div>
+</main>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">カート <button style="float:right" onclick="toggleCart()">閉じる</button></div>
+  <div class="cart-list"></div>
+  <div class="cart-footer">
+    <div>合計: <span class="cart-total">0 円</span></div>
+    <div style="display:flex;gap:8px">
+      <button class="btn secondary" onclick="localStorage.removeItem('spicehouse_cart_v1'); renderCart();">カートを空にする</button>
+      <button class="btn primary" onclick="checkout()">購入手続きへ</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/cart.js"></script>
+</body>
+</html>
